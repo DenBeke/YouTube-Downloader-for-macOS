@@ -7,6 +7,11 @@ I wrote this as a test project to learn more about app development on macOS.*
 ![](https://denbeke.be/blog/wp-content/uploads/2017/11/Youtube-downloader-macOS-Swift.gif)
 
 
+## Download
+
+[Download YouTube Downloader](https://github.com/DenBeke/YouTube-Downloader-for-macOS/releases/download/v0.1/Youtube.Downloader.zip)
+
+
 ## Acknowledgements
 
 * [Alamofire](https://github.com/Alamofire/Alamofire)

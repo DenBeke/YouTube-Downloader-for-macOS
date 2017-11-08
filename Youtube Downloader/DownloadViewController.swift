@@ -22,23 +22,39 @@ class DownloadViewController: NSViewController {
     @IBAction func downloadButtonClicked(_ sender: Any) {
         
         downloadButton.isHidden = true
-        downloadUrl = getDownloadUrl(url: videoUrl.stringValue)
-        //NSWorkspace.shared.open(NSURL(string: downloadUrl)! as URL)
+        progressbar.isHidden = false
         
-        let title = getTitle(url: videoUrl.stringValue)
+        let url = videoUrl.stringValue
         
-        let destination = DownloadRequest.suggestedDownloadDestination(for: .downloadsDirectory)
-        
-        self.progressbar.isHidden = false
-        
-        Alamofire.download(downloadUrl, to: destination).downloadProgress { progress in
-            print("Download Progress: \(progress.fractionCompleted)")
-            self.progressbar.doubleValue = progress.fractionCompleted
-            }.response { response in
-                self.progressbar.isHidden = true
-                self.message.stringValue = "Downloaded: \(title)"
-                self.message.isHidden = false
+        DispatchQueue.global(qos: .background).async {
+            // This is run on the background queue
+            self.downloadUrl = getDownloadUrl(url: url)
+            let title = getTitle(url: url)
+            
+            DispatchQueue.main.async {
+                // This is run on the main queue, after the previous code in outer block
+
+                let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+                    let suffix = Date().toString(dateFormat: "dd-MM-YY")
+                    let pathComponent = "\(title) (\(suffix)).mp4"
+                    var documentsURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0]
+                    documentsURL.appendPathComponent(pathComponent)
+                    return (documentsURL, [.removePreviousFile, .createIntermediateDirectories])
+                }
+                
+                Alamofire.download(self.downloadUrl, to: destination).downloadProgress { progress in
+                    print("Download Progress: \(progress.fractionCompleted)")
+                    self.progressbar.doubleValue = progress.fractionCompleted
+                    }.response { response in
+                        self.progressbar.isHidden = true
+                        self.message.stringValue = "Downloaded: \(title)"
+                        self.message.isHidden = false
+                }
+            }
         }
+        
+        
+        
         
     }
     
@@ -62,3 +78,13 @@ extension DownloadViewController {
     }
 }
 
+extension Date
+{
+    func toString( dateFormat format  : String ) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+    
+}

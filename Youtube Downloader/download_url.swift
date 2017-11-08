@@ -31,3 +31,20 @@ func getDownloadUrl(url: String) -> String {
     return output
 }
 
+
+
+struct Response: Codable {
+    let title: String
+}
+
+func getTitle(url: String) -> String {
+    let path   = String(Bundle.main.path(forResource: "ytdl", ofType: "")!)
+    let json = executeCommand(command: path, args: ["--json", url])
+    
+    let jsonDecoder = JSONDecoder()
+    let info = try? jsonDecoder.decode(Response.self,
+                                       from: json.data(using: .utf8)!)
+    
+    return info!.title
+    
+}

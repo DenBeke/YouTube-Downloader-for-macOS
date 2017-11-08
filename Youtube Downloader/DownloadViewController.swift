@@ -16,15 +16,28 @@ class DownloadViewController: NSViewController {
     var downloadUrl: String = ""
     
     @IBOutlet weak var progressbar: NSProgressIndicator!
+    @IBOutlet weak var downloadButton: NSButton!
+    @IBOutlet weak var message: NSTextField!
     
     @IBAction func downloadButtonClicked(_ sender: Any) {
+        
+        downloadButton.isHidden = true
         downloadUrl = getDownloadUrl(url: videoUrl.stringValue)
         //NSWorkspace.shared.open(NSURL(string: downloadUrl)! as URL)
         
+        let title = getTitle(url: videoUrl.stringValue)
+        
         let destination = DownloadRequest.suggestedDownloadDestination(for: .downloadsDirectory)
+        
+        self.progressbar.isHidden = false
+        
         Alamofire.download(downloadUrl, to: destination).downloadProgress { progress in
             print("Download Progress: \(progress.fractionCompleted)")
             self.progressbar.doubleValue = progress.fractionCompleted
+            }.response { response in
+                self.progressbar.isHidden = true
+                self.message.stringValue = "Downloaded: \(title)"
+                self.message.isHidden = false
         }
         
     }
@@ -38,13 +51,10 @@ class DownloadViewController: NSViewController {
 
 
 extension DownloadViewController {
-    // MARK: Storyboard instantiation
+
     static func freshController() -> DownloadViewController {
-        //1.
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        //2.
         let identifier = NSStoryboard.SceneIdentifier(rawValue: "DownloadViewController")
-        //3.
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? DownloadViewController else {
             fatalError("Why cant i find DownloadViewController? - Check Main.storyboard")
         }

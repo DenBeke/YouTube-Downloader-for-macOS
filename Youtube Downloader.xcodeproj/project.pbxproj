@@ -103,6 +103,7 @@
 		C719FEC41FB3667D00912D76 /* download_url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = download_url.swift; sourceTree = "<group>"; };
 		C719FEC61FB366A500912D76 /* ytdl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ytdl; sourceTree = "<group>"; };
 		C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		C719FF181FB3AD8F00912D76 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 		C719FEA21FB35D4D00912D76 = {
 			isa = PBXGroup;
 			children = (
+				C719FF181FB3AD8F00912D76 /* README.md */,
 				C719FEAD1FB35D4D00912D76 /* Youtube Downloader */,
 				C719FEAC1FB35D4D00912D76 /* Products */,
 				C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */,

@@ -10,6 +10,15 @@ import Cocoa
 
 class DownloadViewController: NSViewController {
     
+    
+    @IBOutlet weak var videoUrl: NSTextField!
+    var downloadUrl: String = ""
+    
+    @IBAction func downloadButtonClicked(_ sender: Any) {
+        downloadUrl = getDownloadUrl(url: videoUrl.stringValue)
+        NSWorkspace.shared.open(NSURL(string: downloadUrl)! as URL)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

@@ -12,6 +12,8 @@
 		C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C719FEB21FB35D4D00912D76 /* Assets.xcassets */; };
 		C719FEB61FB35D4D00912D76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C719FEB41FB35D4D00912D76 /* Main.storyboard */; };
 		C719FEC31FB35F1B00912D76 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */; };
+		C719FEC51FB3667D00912D76 /* download_url.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEC41FB3667D00912D76 /* download_url.swift */; };
+		C719FEC71FB366A500912D76 /* ytdl in Resources */ = {isa = PBXBuildFile; fileRef = C719FEC61FB366A500912D76 /* ytdl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		C719FEB71FB35D4D00912D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C719FEB81FB35D4D00912D76 /* Youtube_Downloader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Youtube_Downloader.entitlements; sourceTree = "<group>"; };
 		C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		C719FEC41FB3667D00912D76 /* download_url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = download_url.swift; sourceTree = "<group>"; };
+		C719FEC61FB366A500912D76 /* ytdl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ytdl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +61,12 @@
 			children = (
 				C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */,
 				C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */,
+				C719FEC41FB3667D00912D76 /* download_url.swift */,
 				C719FEB01FB35D4D00912D76 /* ViewController.swift */,
 				C719FEB21FB35D4D00912D76 /* Assets.xcassets */,
 				C719FEB41FB35D4D00912D76 /* Main.storyboard */,
 				C719FEB71FB35D4D00912D76 /* Info.plist */,
+				C719FEC61FB366A500912D76 /* ytdl */,
 				C719FEB81FB35D4D00912D76 /* Youtube_Downloader.entitlements */,
 			);
 			path = "Youtube Downloader";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C719FEC71FB366A500912D76 /* ytdl in Resources */,
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,
 				C719FEB61FB35D4D00912D76 /* Main.storyboard in Resources */,
 			);
@@ -140,6 +147,7 @@
 				C719FEB11FB35D4D00912D76 /* ViewController.swift in Sources */,
 				C719FEC31FB35F1B00912D76 /* DownloadViewController.swift in Sources */,
 				C719FEAF1FB35D4D00912D76 /* AppDelegate.swift in Sources */,
+				C719FEC51FB3667D00912D76 /* download_url.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

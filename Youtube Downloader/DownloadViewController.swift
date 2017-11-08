@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Alamofire
 
 class DownloadViewController: NSViewController {
     
@@ -14,9 +15,18 @@ class DownloadViewController: NSViewController {
     @IBOutlet weak var videoUrl: NSTextField!
     var downloadUrl: String = ""
     
+    @IBOutlet weak var progressbar: NSProgressIndicator!
+    
     @IBAction func downloadButtonClicked(_ sender: Any) {
         downloadUrl = getDownloadUrl(url: videoUrl.stringValue)
-        NSWorkspace.shared.open(NSURL(string: downloadUrl)! as URL)
+        //NSWorkspace.shared.open(NSURL(string: downloadUrl)! as URL)
+        
+        let destination = DownloadRequest.suggestedDownloadDestination(for: .downloadsDirectory)
+        Alamofire.download(downloadUrl, to: destination).downloadProgress { progress in
+            print("Download Progress: \(progress.fractionCompleted)")
+            self.progressbar.doubleValue = progress.fractionCompleted
+        }
+        
     }
     
     override func viewDidLoad() {

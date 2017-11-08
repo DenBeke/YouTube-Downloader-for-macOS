@@ -14,7 +14,82 @@
 		C719FEC31FB35F1B00912D76 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */; };
 		C719FEC51FB3667D00912D76 /* download_url.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEC41FB3667D00912D76 /* download_url.swift */; };
 		C719FEC71FB366A500912D76 /* ytdl in Resources */ = {isa = PBXBuildFile; fileRef = C719FEC61FB366A500912D76 /* ytdl */; };
+		C719FF131FB36BBF00912D76 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C719FF0A1FB36B7900912D76 /* Alamofire.framework */; };
+		C719FF141FB36BBF00912D76 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C719FF0A1FB36B7900912D76 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C719FF051FB36B7900912D76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		C719FF071FB36B7900912D76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		C719FF091FB36B7900912D76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		C719FF0B1FB36B7900912D76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		C719FF0D1FB36B7900912D76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		C719FF0F1FB36B7900912D76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		C719FF111FB36B7900912D76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		C719FF151FB36BBF00912D76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DD67C0A1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C719FF171FB36BC000912D76 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C719FF141FB36BBF00912D76 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C719FEAB1FB35D4D00912D76 /* Youtube Downloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Downloader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +102,7 @@
 		C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		C719FEC41FB3667D00912D76 /* download_url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = download_url.swift; sourceTree = "<group>"; };
 		C719FEC61FB366A500912D76 /* ytdl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ytdl; sourceTree = "<group>"; };
+		C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C719FF131FB36BBF00912D76 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +122,7 @@
 			children = (
 				C719FEAD1FB35D4D00912D76 /* Youtube Downloader */,
 				C719FEAC1FB35D4D00912D76 /* Products */,
+				C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +150,20 @@
 			path = "Youtube Downloader";
 			sourceTree = "<group>";
 		};
+		C719FEFB1FB36B7800912D76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C719FF061FB36B7900912D76 /* Alamofire.framework */,
+				C719FF081FB36B7900912D76 /* Alamofire iOS Tests.xctest */,
+				C719FF0A1FB36B7900912D76 /* Alamofire.framework */,
+				C719FF0C1FB36B7900912D76 /* Alamofire macOS Tests.xctest */,
+				C719FF0E1FB36B7900912D76 /* Alamofire.framework */,
+				C719FF101FB36B7900912D76 /* Alamofire tvOS Tests.xctest */,
+				C719FF121FB36B7900912D76 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,10 +174,12 @@
 				C719FEA71FB35D4D00912D76 /* Sources */,
 				C719FEA81FB35D4D00912D76 /* Frameworks */,
 				C719FEA91FB35D4D00912D76 /* Resources */,
+				C719FF171FB36BC000912D76 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C719FF161FB36BBF00912D76 /* PBXTargetDependency */,
 			);
 			name = "Youtube Downloader";
 			productName = "Youtube Downloader";
@@ -119,12 +213,70 @@
 			mainGroup = C719FEA21FB35D4D00912D76;
 			productRefGroup = C719FEAC1FB35D4D00912D76 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C719FEFB1FB36B7800912D76 /* Products */;
+					ProjectRef = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C719FEAA1FB35D4D00912D76 /* Youtube Downloader */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C719FF061FB36B7900912D76 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = C719FF051FB36B7900912D76 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C719FF081FB36B7900912D76 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = C719FF071FB36B7900912D76 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C719FF0A1FB36B7900912D76 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = C719FF091FB36B7900912D76 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C719FF0C1FB36B7900912D76 /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = C719FF0B1FB36B7900912D76 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C719FF0E1FB36B7900912D76 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = C719FF0D1FB36B7900912D76 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C719FF101FB36B7900912D76 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = C719FF0F1FB36B7900912D76 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C719FF121FB36B7900912D76 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = C719FF111FB36B7900912D76 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C719FEA91FB35D4D00912D76 /* Resources */ = {
@@ -152,6 +304,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C719FF161FB36BBF00912D76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire macOS";
+			targetProxy = C719FF151FB36BBF00912D76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C719FEB41FB35D4D00912D76 /* Main.storyboard */ = {
@@ -274,6 +434,7 @@
 		C719FEBC1FB35D4D00912D76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Youtube Downloader/Youtube_Downloader.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -289,6 +450,7 @@
 		C719FEBD1FB35D4D00912D76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Youtube Downloader/Youtube_Downloader.entitlements";
 				CODE_SIGN_STYLE = Automatic;

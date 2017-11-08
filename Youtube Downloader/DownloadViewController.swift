@@ -49,6 +49,10 @@ class DownloadViewController: NSViewController {
                         self.progressbar.isHidden = true
                         self.message.stringValue = "Downloaded: \(title)"
                         self.message.isHidden = false
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                             self.reset()
+                        })
                 }
             }
         }
@@ -56,6 +60,15 @@ class DownloadViewController: NSViewController {
         
         
         
+    }
+    
+    
+    func reset() {
+        self.progressbar.isHidden = true
+        self.progressbar.doubleValue = 0
+        self.message.isHidden = true
+        self.downloadButton.isHidden = false
+        self.videoUrl.stringValue = ""
     }
     
     override func viewDidLoad() {

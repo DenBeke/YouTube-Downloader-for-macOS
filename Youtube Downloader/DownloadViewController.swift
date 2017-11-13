@@ -28,9 +28,11 @@ class DownloadViewController: NSViewController {
         
         DispatchQueue.global(qos: .background).async {
             // This is run on the background queue
-            self.downloadUrl = getDownloadUrl(url: url)
-            let title = getTitle(url: url)
+            let videoInfo = VideoInfo.getVideoInfo(url: url)
             
+            self.downloadUrl = videoInfo.url
+            let title = videoInfo.fulltitle
+
             DispatchQueue.main.async {
                 // This is run on the main queue, after the previous code in outer block
 

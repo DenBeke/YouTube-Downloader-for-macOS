@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+func executeCommand(command: String, args: [String]) -> String {
+    
+    let task = Process()
+    
+    task.launchPath = command
+    task.arguments = args
+    
+    let pipe = Pipe()
+    task.standardOutput = pipe
+    task.launch()
+    
+    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    let output: String = String(data: data, encoding: String.Encoding.utf8)!
+    
+    return output
+}

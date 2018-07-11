@@ -31,7 +31,10 @@ class DownloadViewController: NSViewController {
             let videoInfo = VideoInfo.getVideoInfo(url: url)
             
             self.downloadUrl = videoInfo.url
-            let title = videoInfo.fulltitle
+            var title = videoInfo.fulltitle
+            
+            // Escape slashes from path
+            title = title.replacingOccurrences(of: "/", with: " ")
 
             DispatchQueue.main.async {
                 // This is run on the main queue, after the previous code in outer block

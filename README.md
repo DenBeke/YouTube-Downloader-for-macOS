@@ -17,7 +17,7 @@ I wrote this as a test project to learn more about app development on macOS.*
 ## Acknowledgements
 
 * [Alamofire](https://github.com/Alamofire/Alamofire)
-* [rylio/ytdl](https://github.com/rylio/ytdl)
+* [youtube-dl](https://youtube-dl.org)
 
 
 ## Author

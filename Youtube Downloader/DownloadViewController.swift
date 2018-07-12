@@ -19,6 +19,12 @@ class DownloadViewController: NSViewController {
     @IBOutlet weak var downloadButton: NSButton!
     @IBOutlet weak var message: NSTextField!
     
+    
+    
+    @IBOutlet weak var preview: PreviewView!
+    
+    
+    
     @IBAction func downloadButtonClicked(_ sender: Any) {
         
         downloadButton.isHidden = true
@@ -33,12 +39,16 @@ class DownloadViewController: NSViewController {
             self.downloadUrl = videoInfo.url
             var title = videoInfo.fulltitle
             
+            
             // Escape slashes from path
             title = title.replacingOccurrences(of: "/", with: " ")
 
             DispatchQueue.main.async {
                 // This is run on the main queue, after the previous code in outer block
 
+                self.preview.setInfo(info: videoInfo)
+
+                
                 let destination: DownloadRequest.DownloadFileDestination = { _, _ in
                     let suffix = Date().toString(dateFormat: "dd-MM-YY")
                     let pathComponent = "\(title) (\(suffix)).mp4"

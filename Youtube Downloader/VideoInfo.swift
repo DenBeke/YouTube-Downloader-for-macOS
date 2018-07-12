@@ -11,6 +11,8 @@ import Foundation
 class VideoInfo: Codable {
     var fulltitle: String = ""
     var url: String = ""
+    var thumbnail: String = ""
+    var uploader: String = ""
     
     static func getVideoInfo(url: String) -> VideoInfo {
         let path   = String(Bundle.main.path(forResource: "youtube-dl", ofType: "")!)

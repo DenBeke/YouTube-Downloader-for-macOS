@@ -3,23 +3,45 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreviewView" customModule="Youtube_Downloader" customModuleProvider="target">
             <connections>
+                <outlet property="thumbnail" destination="sfy-nf-plG" id="CcK-aD-mRh"/>
+                <outlet property="title" destination="7nE-14-XkO" id="ZEM-tl-Tjd"/>
                 <outlet property="topView" destination="c22-O7-iKe" id="2YA-5P-2EW"/>
+                <outlet property="uploader" destination="f9t-7T-UV9" id="A79-Nz-3uu"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="429" height="72"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eOp-Sv-dcd">
-                    <rect key="frame" x="222" y="127" width="37" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="ZNl-NS-Adx">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-nf-plG">
+                    <rect key="frame" x="0.0" y="0.0" width="128" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="NG9-A7-2fz"/>
+                        <constraint firstAttribute="width" secondItem="sfy-nf-plG" secondAttribute="height" multiplier="16:9" id="d1f-kU-VdL"/>
+                        <constraint firstAttribute="height" constant="72" id="p2C-je-iR0"/>
+                        <constraint firstAttribute="width" secondItem="sfy-nf-plG" secondAttribute="height" multiplier="16:9" id="xcn-Z8-txq"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="placeholder" id="5zW-PH-ebI"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7nE-14-XkO">
+                    <rect key="frame" x="134" y="45" width="31" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="fwe-S0-rAL">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f9t-7T-UV9">
+                    <rect key="frame" x="136" y="20" width="60" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Uploader" id="10u-sY-SWF">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -27,9 +49,17 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="eOp-Sv-dcd" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="KOY-MA-XqN"/>
-                <constraint firstItem="eOp-Sv-dcd" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="NN8-eL-wvP"/>
+                <constraint firstItem="f9t-7T-UV9" firstAttribute="leading" secondItem="sfy-nf-plG" secondAttribute="trailing" constant="10" id="84n-Hd-9cT"/>
+                <constraint firstItem="sfy-nf-plG" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="E2t-Xm-cOw"/>
+                <constraint firstItem="7nE-14-XkO" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="10" id="OZv-8M-H9M"/>
+                <constraint firstItem="7nE-14-XkO" firstAttribute="leading" secondItem="sfy-nf-plG" secondAttribute="trailing" constant="8" id="fdf-TL-PFL"/>
+                <constraint firstItem="f9t-7T-UV9" firstAttribute="top" secondItem="7nE-14-XkO" secondAttribute="bottom" constant="8" id="hT2-4h-nq3"/>
+                <constraint firstItem="sfy-nf-plG" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="vCK-O7-f21"/>
             </constraints>
+            <point key="canvasLocation" x="113.5" y="68"/>
         </customView>
     </objects>
+    <resources>
+        <image name="placeholder" width="1280" height="720"/>
+    </resources>
 </document>

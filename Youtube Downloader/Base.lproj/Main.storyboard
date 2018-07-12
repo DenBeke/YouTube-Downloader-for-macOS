@@ -686,11 +686,11 @@
             <objects>
                 <viewController storyboardIdentifier="DownloadViewController" id="XfG-lQ-9wD" customClass="DownloadViewController" customModule="Youtube_Downloader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="429" height="98"/>
+                        <rect key="frame" x="0.0" y="0.0" width="429" height="239"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-ff-HEa">
-                                <rect key="frame" x="20" y="56" width="389" height="22"/>
+                                <rect key="frame" x="20" y="197" width="389" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="UDf-kP-ieK">
                                     <font key="font" metaFont="system"/>
@@ -699,7 +699,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvN-kN-ctS">
-                                <rect key="frame" x="149" y="13" width="130" height="32"/>
+                                <rect key="frame" x="149" y="154" width="130" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Download" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dxw-6p-HaB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -710,11 +710,11 @@
                                 </connections>
                             </button>
                             <progressIndicator hidden="YES" wantsLayer="YES" fixedFrame="YES" maxValue="1" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="re9-0Z-l3o">
-                                <rect key="frame" x="20" y="21" width="389" height="20"/>
+                                <rect key="frame" x="20" y="162" width="389" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-29-6Yz">
-                                <rect key="frame" x="18" y="22" width="393" height="17"/>
+                                <rect key="frame" x="18" y="163" width="393" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="R5T-V5-dGf">
                                     <font key="font" metaFont="system"/>
@@ -723,7 +723,7 @@
                                 </textFieldCell>
                             </textField>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geM-iV-lon" customClass="PreviewView" customModule="Youtube_Downloader" customModuleProvider="target">
-                                <rect key="frame" x="155" y="2" width="163" height="96"/>
+                                <rect key="frame" x="0.0" y="69" width="429" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                         </subviews>
@@ -731,13 +731,14 @@
                     <connections>
                         <outlet property="downloadButton" destination="hvN-kN-ctS" id="aXr-jB-OVD"/>
                         <outlet property="message" destination="DMU-29-6Yz" id="o8D-V8-L6J"/>
+                        <outlet property="preview" destination="geM-iV-lon" id="juc-B9-Y9e"/>
                         <outlet property="progressbar" destination="re9-0Z-l3o" id="EEh-A1-CLz"/>
                         <outlet property="videoUrl" destination="oJO-ff-HEa" id="G0A-rK-eOb"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49.5" y="569"/>
+            <point key="canvasLocation" x="49.5" y="639.5"/>
         </scene>
     </scenes>
 </document>

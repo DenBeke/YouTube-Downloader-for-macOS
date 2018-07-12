@@ -11,7 +11,7 @@ import Cocoa
 class NibLoader: NSView {
 
     var topView: NSView!
-    
+
 
     override func draw(_ dirtyRect: NSRect) {
         //NSColor.brown.setFill()

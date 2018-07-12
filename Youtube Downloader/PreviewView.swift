@@ -12,6 +12,19 @@ import Cocoa
 
 class PreviewView: NibLoader {
     
+    
+    @IBOutlet weak var thumbnail: NSImageView!
+    @IBOutlet weak var title: NSTextField!
+    @IBOutlet weak var uploader: NSTextField!
+    
+    
+    func setInfo(info: VideoInfo) {
+        self.title.stringValue = info.fulltitle
+        self.uploader.stringValue = info.uploader
+        self.thumbnail.image = NSImage(byReferencing: URL(string: info.thumbnail)!)
+    }
+    
+    
     @IBOutlet var topView2: NSView!
     
     override var topView: NSView! {

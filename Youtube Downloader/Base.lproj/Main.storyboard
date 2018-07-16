@@ -724,10 +724,10 @@ DQ
             </objects>
             <point key="canvasLocation" x="49.5" y="568.5"/>
         </scene>
-        <!--Preview View Controller-->
+        <!--Video Info-->
         <scene sceneID="RRf-5M-z6j">
             <objects>
-                <viewController id="dha-Dl-85H" customClass="PreviewViewController" customModule="Youtube_Downloader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Video Info" id="dha-Dl-85H" customClass="PreviewViewController" customModule="Youtube_Downloader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="Slq-SC-bc0">
                         <rect key="frame" x="0.0" y="0.0" width="429" height="133"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -767,10 +767,10 @@ DQ
             </objects>
             <point key="canvasLocation" x="596.5" y="586.5"/>
         </scene>
-        <!--Download View Controller-->
+        <!--Download-->
         <scene sceneID="gem-FP-rqu">
             <objects>
-                <viewController id="EwA-a8-c29" customClass="DownloadViewController" customModule="Youtube_Downloader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Download" id="EwA-a8-c29" customClass="DownloadViewController" customModule="Youtube_Downloader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="DCO-ua-9xJ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="83"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -29,7 +29,7 @@
                         <constraint firstAttribute="height" constant="72" id="p2C-je-iR0"/>
                         <constraint firstAttribute="width" secondItem="sfy-nf-plG" secondAttribute="height" multiplier="16:9" id="xcn-Z8-txq"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="placeholder" id="5zW-PH-ebI"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="placeholder" id="5zW-PH-ebI"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7nE-14-XkO">
                     <rect key="frame" x="135" y="45" width="31" height="17"/>

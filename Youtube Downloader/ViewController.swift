@@ -1,9 +1,9 @@
 //
-//  ViewController.swift
+//  ViewController2.swift
 //  Youtube Downloader
 //
-//  Created by Mathias Beke on 8/11/17.
-//  Copyright © 2017 Mathias Beke. All rights reserved.
+//  Created by Mathias Beke on 16/07/18.
+//  Copyright © 2018 Mathias Beke. All rights reserved.
 //
 
 import Cocoa
@@ -12,16 +12,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Do view setup here.
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
-
+    
 }
-

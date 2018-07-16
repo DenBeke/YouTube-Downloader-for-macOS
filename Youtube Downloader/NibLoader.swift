@@ -10,7 +10,7 @@ import Cocoa
 
 class NibLoader: NSView {
 
-    var topView: NSView!
+    @IBOutlet var topView: NSView!
 
 
     override func draw(_ dirtyRect: NSRect) {

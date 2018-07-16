@@ -11,7 +11,7 @@
             <connections>
                 <outlet property="thumbnail" destination="sfy-nf-plG" id="CcK-aD-mRh"/>
                 <outlet property="title" destination="7nE-14-XkO" id="ZEM-tl-Tjd"/>
-                <outlet property="topView" destination="c22-O7-iKe" id="2YA-5P-2EW"/>
+                <outlet property="topView" destination="c22-O7-iKe" id="nxK-AT-0Wk"/>
                 <outlet property="uploader" destination="f9t-7T-UV9" id="A79-Nz-3uu"/>
             </connections>
         </customObject>

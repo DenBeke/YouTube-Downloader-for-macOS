@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named:NSImage.Name("Menu"))
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = DownloadViewController.freshController()
+        popover.contentViewController = MenuPopoverViewController.freshController()
         popover.behavior = .transient
     }
 

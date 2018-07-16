@@ -24,6 +24,8 @@ class DownloadViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         
+        self.message.stringValue = "Downloading \(videoInfo.fulltitle)..."
+        
         var title = videoInfo.fulltitle
         // Escape slashes from path
         title = title.replacingOccurrences(of: "/", with: " ")
@@ -41,7 +43,7 @@ class DownloadViewController: NSViewController {
             print("Download Progress: \(progress.fractionCompleted)")
             self.progressbar.doubleValue = progress.fractionCompleted
             }.response { response in
-                self.progressbar.isHidden = true
+                //self.progressbar.isHidden = true
                 self.message.stringValue = "Downloaded: \(title)"
                 self.message.isHidden = false
                 

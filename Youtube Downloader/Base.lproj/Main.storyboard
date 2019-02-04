@@ -751,6 +751,7 @@ DQ
                         <outlet property="message" destination="DMU-29-6Yz" id="o8D-V8-L6J"/>
                         <outlet property="preview" destination="geM-iV-lon" id="juc-B9-Y9e"/>
                         <outlet property="progressbar" destination="re9-0Z-l3o" id="EEh-A1-CLz"/>
+                        <outlet property="quitButton" destination="jqp-I9-CCn" id="uF1-aS-IOA"/>
                         <outlet property="spinner" destination="o2I-Vf-I2E" id="TbQ-bQ-nQq"/>
                         <outlet property="videoUrl" destination="oJO-ff-HEa" id="G0A-rK-eOb"/>
                     </connections>

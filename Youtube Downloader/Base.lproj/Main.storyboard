@@ -707,11 +707,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvN-kN-ctS">
-                                <rect key="frame" x="149" y="30" width="130" height="32"/>
+                                <rect key="frame" x="112" y="29" width="132" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Download" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dxw-6p-HaB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="downloadButtonClicked:" target="XfG-lQ-9wD" id="vzt-9u-ySi"/>
@@ -725,14 +728,22 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
-                                <connections>
-                                    <action selector="downloadButtonClicked:" target="XfG-lQ-9wD" id="oSQ-Cj-rVM"/>
-                                </connections>
                             </textField>
                             <progressIndicator hidden="YES" wantsLayer="YES" canDrawConcurrently="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="o2I-Vf-I2E">
                                 <rect key="frame" x="198" y="31" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jqp-I9-CCn">
+                                <rect key="frame" x="244" y="29" width="73" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HP5-IK-cHN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="QuitWithSender:" target="XfG-lQ-9wD" id="L89-8n-T6Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

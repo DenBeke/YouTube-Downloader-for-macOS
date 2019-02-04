@@ -18,6 +18,7 @@ class DownloadViewController: NSViewController {
     @IBOutlet weak var spinner: NSProgressIndicator!
     @IBOutlet weak var progressbar: NSProgressIndicator!
     @IBOutlet weak var downloadButton: NSButton!
+    @IBOutlet weak var quitButton: NSButton!
     @IBOutlet weak var message: NSTextField!
     
     
@@ -29,6 +30,7 @@ class DownloadViewController: NSViewController {
     @IBAction func downloadButtonClicked(_ sender: Any) {
         
         downloadButton.isHidden = true
+        quitButton.isHidden = true
         spinner.isHidden = false
         spinner.startAnimation(self)
         
@@ -94,6 +96,7 @@ class DownloadViewController: NSViewController {
         self.videoUrl.isHidden = false
         self.spinner.isHidden = true
         self.spinner.stopAnimation(self)
+        self.quitButton.isHidden = false
         
         // Reset focus on textfield
         self.videoUrl.becomeFirstResponder()
@@ -102,6 +105,11 @@ class DownloadViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+    }
+    
+    
+    @IBAction func Quit(sender: AnyObject) {
+        NSApplication.shared.terminate(self)
     }
     
 }

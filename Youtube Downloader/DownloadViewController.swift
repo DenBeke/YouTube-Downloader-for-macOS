@@ -94,6 +94,9 @@ class DownloadViewController: NSViewController {
         self.videoUrl.isHidden = false
         self.spinner.isHidden = true
         self.spinner.stopAnimation(self)
+        
+        // Reset focus on textfield
+        self.videoUrl.becomeFirstResponder()
     }
     
     override func viewDidLoad() {

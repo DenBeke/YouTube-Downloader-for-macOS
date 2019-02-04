@@ -15,6 +15,7 @@ class DownloadViewController: NSViewController {
     @IBOutlet weak var videoUrl: NSTextField!
     var downloadUrl: String = ""
     
+    @IBOutlet weak var spinner: NSProgressIndicator!
     @IBOutlet weak var progressbar: NSProgressIndicator!
     @IBOutlet weak var downloadButton: NSButton!
     @IBOutlet weak var message: NSTextField!
@@ -28,7 +29,8 @@ class DownloadViewController: NSViewController {
     @IBAction func downloadButtonClicked(_ sender: Any) {
         
         downloadButton.isHidden = true
-        progressbar.isHidden = false
+        spinner.isHidden = false
+        spinner.startAnimation(self)
         
         let url = videoUrl.stringValue
         
@@ -47,6 +49,10 @@ class DownloadViewController: NSViewController {
                 // This is run on the main queue, after the previous code in outer block
 
                 self.preview.setInfo(info: videoInfo)
+                self.spinner.isHidden = true
+                self.progressbar.isHidden = false
+                self.preview.isHidden = false
+                self.videoUrl.isHidden = true
 
                 
                 let destination: DownloadRequest.DownloadFileDestination = { _, _ in
@@ -84,6 +90,10 @@ class DownloadViewController: NSViewController {
         self.message.isHidden = true
         self.downloadButton.isHidden = false
         self.videoUrl.stringValue = ""
+        self.preview.isHidden = true
+        self.videoUrl.isHidden = false
+        self.spinner.isHidden = true
+        self.spinner.stopAnimation(self)
     }
     
     override func viewDidLoad() {

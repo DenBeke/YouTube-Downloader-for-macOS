@@ -2,16 +2,15 @@
 
 [![Build Status](https://travis-ci.com/DenBeke/YouTube-Downloader-for-macOS.svg?branch=master)](https://travis-ci.com/DenBeke/YouTube-Downloader-for-macOS)
 
-*Simple menu bar app to download YouTube movies on your Mac.
-I wrote this as a test project to learn more about app development on macOS.*
+*Simple menu bar app to download YouTube movies on your Mac.*
 
 
-![](https://denbeke.be/blog/wp-content/uploads/2017/11/Youtube-downloader-macOS-Swift.gif)
+![](https://denbeke.be/blog/wp-content/uploads/2019/02/youtube-download.gif)
 
 
 ## Download
 
-[Download YouTube Downloader](https://github.com/DenBeke/YouTube-Downloader-for-macOS/releases/download/v0.1/Youtube.Downloader.zip)
+Latest version: [Download YouTube Downloader](https://github.com/DenBeke/YouTube-Downloader-for-macOS/releases/download/v0.2/Youtube.Downloader.zip)
 
 
 ## Acknowledgements

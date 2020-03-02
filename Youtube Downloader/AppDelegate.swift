@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         
         if let button = statusItem.button {
-            button.image = NSImage(named:NSImage.Name("Menu"))
+            button.image = NSImage(named:"Menu")
             button.action = #selector(togglePopover(_:))
         }
         popover.contentViewController = DownloadViewController.freshController()

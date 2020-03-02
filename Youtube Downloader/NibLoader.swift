@@ -36,7 +36,7 @@ class NibLoader: NSView {
         /// Get our NIB. This should never fail but it always pays to be careful
         /// In this case it gets the main Bundle but if this code is in a Framework then it might be another one,
         /// that's why we use that form of Bundle call
-        if let nib = NSNib(nibNamed: NSNib.Name(rawValue: myName), bundle: Bundle(for: type(of: self))) {
+        if let nib = NSNib(nibNamed: myName, bundle: Bundle(for: type(of: self))) {
             
             
             /// You must instantiate a new view from the NIB attached to you as the owner,

@@ -118,8 +118,8 @@ class DownloadViewController: NSViewController {
 extension DownloadViewController {
 
     static func freshController() -> DownloadViewController {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        let identifier = NSStoryboard.SceneIdentifier(rawValue: "DownloadViewController")
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let identifier = "DownloadViewController"
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? DownloadViewController else {
             fatalError("Why cant i find DownloadViewController? - Check Main.storyboard")
         }

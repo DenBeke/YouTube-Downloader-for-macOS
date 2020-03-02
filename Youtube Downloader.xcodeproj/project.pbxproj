@@ -16,6 +16,7 @@
 		C719FF131FB36BBF00912D76 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C719FF0A1FB36B7900912D76 /* Alamofire.framework */; };
 		C719FF141FB36BBF00912D76 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C719FF0A1FB36B7900912D76 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C75EC957240D462A00EF8589 /* youtube-dl in Resources */ = {isa = PBXBuildFile; fileRef = C75EC956240D462A00EF8589 /* youtube-dl */; };
+		C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = C75EC959240D56C300EF8589 /* exportOptions.plist */; };
 		C791BD1F20F6999500625D46 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791BD1E20F6999500625D46 /* PreviewView.swift */; };
 		C791BD2120F69D9200625D46 /* PreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C791BD2020F69D9200625D46 /* PreviewView.xib */; };
 		C791BD2320F74D8400625D46 /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791BD2220F74D8400625D46 /* NibLoader.swift */; };
@@ -110,6 +111,7 @@
 		C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C719FF181FB3AD8F00912D76 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C75EC956240D462A00EF8589 /* youtube-dl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "youtube-dl"; sourceTree = "<group>"; };
+		C75EC959240D56C300EF8589 /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		C791BD1E20F6999500625D46 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		C791BD2020F69D9200625D46 /* PreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewView.xib; sourceTree = "<group>"; };
 		C791BD2220F74D8400625D46 /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		C719FEA21FB35D4D00912D76 = {
 			isa = PBXGroup;
 			children = (
+				C75EC959240D56C300EF8589 /* exportOptions.plist */,
 				C719FF181FB3AD8F00912D76 /* README.md */,
 				C719FEAD1FB35D4D00912D76 /* Youtube Downloader */,
 				C719FEAC1FB35D4D00912D76 /* Products */,
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C791BD2120F69D9200625D46 /* PreviewView.xib in Resources */,
+				C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */,
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,
 				C791BD2520F7562400625D46 /* placeholder.png in Resources */,
 				C75EC957240D462A00EF8589 /* youtube-dl in Resources */,

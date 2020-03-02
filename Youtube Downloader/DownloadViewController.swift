@@ -57,7 +57,7 @@ class DownloadViewController: NSViewController {
                 self.videoUrl.isHidden = true
 
                 
-                let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+                let destination: DownloadRequest.Destination = { _, _ in
                     let suffix = Date().toString(dateFormat: "dd-MM-YY")
                     let pathComponent = "\(title) (\(suffix)).mp4"
                     var documentsURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0]
@@ -65,7 +65,7 @@ class DownloadViewController: NSViewController {
                     return (documentsURL, [.removePreviousFile, .createIntermediateDirectories])
                 }
                 
-                Alamofire.download(self.downloadUrl, to: destination).downloadProgress { progress in
+                AF.download(self.downloadUrl, to: destination).downloadProgress { progress in
                     print("Download Progress: \(progress.fractionCompleted)")
                     self.progressbar.doubleValue = progress.fractionCompleted
                     }.response { response in

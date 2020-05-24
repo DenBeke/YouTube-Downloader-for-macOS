@@ -10,7 +10,7 @@
 
 ## Download
 
-Latest version: [Download YouTube Downloader](https://github.com/DenBeke/YouTube-Downloader-for-macOS/releases/download/v0.2/Youtube.Downloader.zip)
+Latest version can be found on [releases page](https://github.com/DenBeke/YouTube-Downloader-for-macOS/releases).
 
 
 ## Acknowledgements

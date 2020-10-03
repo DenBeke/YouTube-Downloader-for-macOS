@@ -15,8 +15,8 @@
 		C719FEC31FB35F1B00912D76 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */; };
 		C719FF131FB36BBF00912D76 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C719FF0A1FB36B7900912D76 /* Alamofire.framework */; };
 		C719FF141FB36BBF00912D76 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C719FF0A1FB36B7900912D76 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C73595752528770800BA87DF /* youtube-dl in Resources */ = {isa = PBXBuildFile; fileRef = C7359574252876FA00BA87DF /* youtube-dl */; };
 		C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = C75EC959240D56C300EF8589 /* exportOptions.plist */; };
-		C76A33ED245EC968007F79A7 /* youtube-dl in Resources */ = {isa = PBXBuildFile; fileRef = C76A33EC245EC968007F79A7 /* youtube-dl */; };
 		C791BD1F20F6999500625D46 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791BD1E20F6999500625D46 /* PreviewView.swift */; };
 		C791BD2120F69D9200625D46 /* PreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C791BD2020F69D9200625D46 /* PreviewView.xib */; };
 		C791BD2320F74D8400625D46 /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791BD2220F74D8400625D46 /* NibLoader.swift */; };
@@ -110,8 +110,8 @@
 		C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C719FF181FB3AD8F00912D76 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C7359574252876FA00BA87DF /* youtube-dl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "youtube-dl"; sourceTree = "<group>"; };
 		C75EC959240D56C300EF8589 /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
-		C76A33EC245EC968007F79A7 /* youtube-dl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "youtube-dl"; sourceTree = "<group>"; };
 		C791BD1E20F6999500625D46 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		C791BD2020F69D9200625D46 /* PreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewView.xib; sourceTree = "<group>"; };
 		C791BD2220F74D8400625D46 /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 				C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */,
 				C719FEB01FB35D4D00912D76 /* ViewController.swift */,
 				C719FEB21FB35D4D00912D76 /* Assets.xcassets */,
+				C7359574252876FA00BA87DF /* youtube-dl */,
 				C719FEB41FB35D4D00912D76 /* Main.storyboard */,
-				C76A33EC245EC968007F79A7 /* youtube-dl */,
 				C719FEB71FB35D4D00912D76 /* Info.plist */,
 				C719FEB81FB35D4D00912D76 /* Youtube_Downloader.entitlements */,
 			);
@@ -311,7 +311,7 @@
 				C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */,
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,
 				C791BD2520F7562400625D46 /* placeholder.png in Resources */,
-				C76A33ED245EC968007F79A7 /* youtube-dl in Resources */,
+				C73595752528770800BA87DF /* youtube-dl in Resources */,
 				C719FEB61FB35D4D00912D76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

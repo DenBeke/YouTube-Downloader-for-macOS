@@ -21,7 +21,11 @@ class PreviewView: NibLoader {
     func setInfo(info: VideoInfo) {
         self.title.stringValue = info.fulltitle
         self.uploader.stringValue = info.uploader
-        self.thumbnail.image = NSImage(byReferencing: URL(string: info.thumbnail)!)
+        
+        // dirty solutions to get the JPG thumbnail instead of the webp version.
+        let jpgThumnbnail = info.thumbnail.replacingOccurrences(of: "vi_webp", with: "vi").replacingOccurrences(of: "webp", with: "jpg")
+        
+        self.thumbnail.image = NSImage(byReferencing: URL(string: jpgThumnbnail)!)
     }
     
     

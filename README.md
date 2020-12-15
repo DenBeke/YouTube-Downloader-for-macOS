@@ -12,7 +12,7 @@
 
 Latest version can be found on [releases page](https://github.com/DenBeke/YouTube-Downloader-for-macOS/releases).
 
-If you have [Homebrew](https://brew.sh/) installed, try run the following in your terminal:
+You can also install it with [Homebrew](https://brew.sh/):
 ```shell
 brew install --cask youtube-downloader
 ```

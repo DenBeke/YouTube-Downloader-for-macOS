@@ -16,7 +16,7 @@ class VideoInfo: Codable {
     
     static func getVideoInfo(url: String) -> VideoInfo {
         let path   = String(Bundle.main.path(forResource: "youtube-dl", ofType: "")!)
-        let json = executeCommand(command: path, args: ["-f mp4/best", "--dump-json", url])
+        let json = executeCommand(command: path, args: ["--dump-json", url])
         
         let jsonDecoder = JSONDecoder()
         let info = try? jsonDecoder.decode(VideoInfo.self, from: json.data(using: .utf8)!)

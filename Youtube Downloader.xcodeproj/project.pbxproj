@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C700C66227A8861E00AB98E6 /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C700C66127A8861E00AB98E6 /* yt-dlp */; };
 		C707639F2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */; };
 		C719FEAF1FB35D4D00912D76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */; };
 		C719FEB11FB35D4D00912D76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEB01FB35D4D00912D76 /* ViewController.swift */; };
@@ -23,6 +22,7 @@
 		C791BD2520F7562400625D46 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C791BD2420F7562400625D46 /* placeholder.png */; };
 		C7C5C4DD27A99A6600DFDE00 /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4DC27A99A6600DFDE00 /* errors.swift */; };
 		C7C5C4E527A9AD8F00DFDE00 /* crash_report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */; };
+		C7C5C51427A9BC3500DFDE00 /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C7C5C51327A9BC3500DFDE00 /* yt-dlp */; };
 		C7F9F8DB1FBA3D560033E5EC /* execute_command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */; };
 		C7F9F8DD1FBA3D6A0033E5EC /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */; };
 /* End PBXBuildFile section */
@@ -122,7 +122,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C700C66127A8861E00AB98E6 /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "yt-dlp"; path = "../../../Downloads/yt-dlp"; sourceTree = "<group>"; };
 		C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageView_ScaleAspectFill.swift; sourceTree = "<group>"; };
 		C719FEAB1FB35D4D00912D76 /* Youtube Downloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Downloader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +141,7 @@
 		C7C5C4DC27A99A6600DFDE00 /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
 		C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crash_report.swift; sourceTree = "<group>"; };
 		C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sentry.xcodeproj; path = "sentry-cocoa/Sentry.xcodeproj"; sourceTree = "<group>"; };
+		C7C5C51327A9BC3500DFDE00 /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "yt-dlp"; sourceTree = "<group>"; };
 		C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = execute_command.swift; sourceTree = "<group>"; };
 		C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,8 +181,8 @@
 		C719FEAD1FB35D4D00912D76 /* Youtube Downloader */ = {
 			isa = PBXGroup;
 			children = (
-				C700C66127A8861E00AB98E6 /* yt-dlp */,
 				C791BD2420F7562400625D46 /* placeholder.png */,
+				C7C5C51327A9BC3500DFDE00 /* yt-dlp */,
 				C791BD1E20F6999500625D46 /* PreviewView.swift */,
 				C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */,
 				C791BD2020F69D9200625D46 /* PreviewView.xib */,
@@ -364,7 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C700C66227A8861E00AB98E6 /* yt-dlp in Resources */,
+				C7C5C51427A9BC3500DFDE00 /* yt-dlp in Resources */,
 				C791BD2120F69D9200625D46 /* PreviewView.xib in Resources */,
 				C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */,
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,

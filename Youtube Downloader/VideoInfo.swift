@@ -15,6 +15,13 @@ class VideoInfo: Codable {
     var uploader: String = ""
     
     static func getVideoInfo(url: String) throws -> VideoInfo {
+        
+        // Check if URL is valid
+        if !canOpenURL(url) {
+            throw GetInfoError("Invalid URL: " + url)
+        }
+        
+        // Get with yt-dlp
         let path   = String(Bundle.main.path(forResource: "yt-dlp", ofType: "")!)
         let json = try executeCommand(command: path, args: ["-f", "b", "--dump-json", url])
         
@@ -38,5 +45,20 @@ class VideoInfo: Codable {
     
         
         return info
+    }
+}
+
+
+func canOpenURL(_ urlString: String) -> Bool {
+
+    let pat = "((https|http)://){0,1}((\\w|-)+)(([.]|[/])((\\w|-)+))+"
+    let regex = try! NSRegularExpression(pattern: pat, options: [])
+    
+    let matches = regex.numberOfMatches(in: urlString, options: [], range: NSMakeRange(0,urlString.utf16.count))
+    if (matches == 1 ) {
+        return true
+    }
+    else {
+        return false
     }
 }

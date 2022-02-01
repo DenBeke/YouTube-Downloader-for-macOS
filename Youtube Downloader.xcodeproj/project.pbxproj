@@ -23,6 +23,8 @@
 		C7C5C4DD27A99A6600DFDE00 /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4DC27A99A6600DFDE00 /* errors.swift */; };
 		C7C5C4E527A9AD8F00DFDE00 /* crash_report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */; };
 		C7C5C51427A9BC3500DFDE00 /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C7C5C51327A9BC3500DFDE00 /* yt-dlp */; };
+		C7C5C51627A9C55F00DFDE00 /* Sentry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */; };
+		C7C5C51727A9C55F00DFDE00 /* Sentry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F9F8DB1FBA3D560033E5EC /* execute_command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */; };
 		C7F9F8DD1FBA3D6A0033E5EC /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */; };
 /* End PBXBuildFile section */
@@ -115,6 +117,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C719FF141FB36BBF00912D76 /* Alamofire.framework in Embed Frameworks */,
+				C7C5C51727A9C55F00DFDE00 /* Sentry.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C719FF131FB36BBF00912D76 /* Alamofire.framework in Frameworks */,
+				C7C5C51627A9C55F00DFDE00 /* Sentry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +171,7 @@
 				C719FEAC1FB35D4D00912D76 /* Products */,
 				C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */,
 				C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */,
+				C7C5C51527A9C55F00DFDE00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +228,13 @@
 				C7C5C50027A9B2C000DFDE00 /* SentryTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7C5C51527A9C55F00DFDE00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

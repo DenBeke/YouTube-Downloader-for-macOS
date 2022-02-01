@@ -23,6 +23,7 @@ func sendCrashReport(err: Error) {
     
     SentrySDK.configureScope { scope in
         scope.setExtra(value: err, key: "original-error")
+        scope.setLevel(.error)
     }
     
     SentrySDK.capture(message: err.localizedDescription)

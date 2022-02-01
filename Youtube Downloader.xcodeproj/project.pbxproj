@@ -84,6 +84,27 @@
 			remoteGlobalIDString = 4DD67C0A1A5C55C900ED2280;
 			remoteInfo = "Alamofire macOS";
 		};
+		C7C5C4FD27A9B2C000DFDE00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63AA759B1EB8AEF500D153DE;
+			remoteInfo = Sentry;
+		};
+		C7C5C4FF27A9B2C000DFDE00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63AA76651EB8CB2F00D153DE;
+			remoteInfo = SentryTests;
+		};
+		C7C5C50127A9B2CA00DFDE00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 63AA759A1EB8AEF500D153DE;
+			remoteInfo = Sentry;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -120,6 +141,7 @@
 		C791BD2420F7562400625D46 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		C7C5C4DC27A99A6600DFDE00 /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
 		C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crash_report.swift; sourceTree = "<group>"; };
+		C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sentry.xcodeproj; path = "sentry-cocoa/Sentry.xcodeproj"; sourceTree = "<group>"; };
 		C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = execute_command.swift; sourceTree = "<group>"; };
 		C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +165,7 @@
 				C719FF181FB3AD8F00912D76 /* README.md */,
 				C719FEAD1FB35D4D00912D76 /* Youtube Downloader */,
 				C719FEAC1FB35D4D00912D76 /* Products */,
+				C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */,
 				C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -193,6 +216,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C7C5C4F927A9B2C000DFDE00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */,
+				C7C5C50027A9B2C000DFDE00 /* SentryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,6 +240,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C7C5C50227A9B2CA00DFDE00 /* PBXTargetDependency */,
 				C719FF161FB36BBF00912D76 /* PBXTargetDependency */,
 			);
 			name = "Youtube Downloader";
@@ -247,6 +280,10 @@
 				{
 					ProductGroup = C719FEFB1FB36B7800912D76 /* Products */;
 					ProjectRef = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = C7C5C4F927A9B2C000DFDE00 /* Products */;
+					ProjectRef = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -306,6 +343,20 @@
 			remoteRef = C719FF111FB36B7900912D76 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Sentry.framework;
+			remoteRef = C7C5C4FD27A9B2C000DFDE00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7C5C50027A9B2C000DFDE00 /* SentryTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SentryTests.xctest;
+			remoteRef = C7C5C4FF27A9B2C000DFDE00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -349,6 +400,11 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire macOS";
 			targetProxy = C719FF151FB36BBF00912D76 /* PBXContainerItemProxy */;
+		};
+		C7C5C50227A9B2CA00DFDE00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Sentry;
+			targetProxy = C7C5C50127A9B2CA00DFDE00 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

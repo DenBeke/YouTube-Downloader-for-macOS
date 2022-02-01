@@ -1,3 +1,6 @@
 [submodule "Alamofire"]
 	path = Alamofire
 	url = https://github.com/Alamofire/Alamofire.git
+[submodule "sentry-cocoa"]
+	path = sentry-cocoa
+	url = https://github.com/getsentry/sentry-cocoa

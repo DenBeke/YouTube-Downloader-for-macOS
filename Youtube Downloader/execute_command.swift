@@ -19,7 +19,10 @@ func executeCommand(command: String, args: [String]) -> String {
     task.standardOutput = pipe
     task.launch()
     
+    //task.waitUntilExit()
+    // we already start reading the pipe so it won't get full
     let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    
     let output: String = String(data: data, encoding: String.Encoding.utf8)!
     
     return output

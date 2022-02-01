@@ -20,7 +20,7 @@ brew install --cask youtube-downloader
 ## Acknowledgements
 
 * [Alamofire](https://github.com/Alamofire/Alamofire)
-* [youtube-dl](https://youtube-dl.org)
+* [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
 
 ## Author

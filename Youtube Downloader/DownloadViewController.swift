@@ -9,6 +9,18 @@
 import Cocoa
 import Alamofire
 
+
+func errorDialog(question: String, text: String) -> Bool {
+    let alert = NSAlert()
+    alert.messageText = question
+    alert.informativeText = text
+    alert.alertStyle = .warning
+    alert.addButton(withTitle: "OK")
+    alert.addButton(withTitle: "Send crash report")
+    return alert.runModal() == .alertFirstButtonReturn
+}
+
+
 class DownloadViewController: NSViewController {
     
     
@@ -38,8 +50,16 @@ class DownloadViewController: NSViewController {
         
         DispatchQueue.global(qos: .background).async {
             // This is run on the background queue
-            let videoInfo = VideoInfo.getVideoInfo(url: url)
+            var videoInfo: VideoInfo = VideoInfo()
+            var err: Error? = nil
             
+            do {
+                videoInfo = try VideoInfo.getVideoInfo(url: url)
+            }
+            catch {
+                err = error
+            }
+                
             self.downloadUrl = videoInfo.url
             var title = videoInfo.fulltitle
             
@@ -49,6 +69,15 @@ class DownloadViewController: NSViewController {
 
             DispatchQueue.main.async {
                 // This is run on the main queue, after the previous code in outer block
+                
+                if err != nil {
+                    let clickedOk = errorDialog(question: "Oops, something went wrong", text: err!.localizedDescription)
+                    if !clickedOk {
+                        sendCrashReport(err: err!)
+                    }
+                    self.reset()
+                    return
+                }
 
                 self.preview.setInfo(info: videoInfo)
                 self.spinner.isHidden = true

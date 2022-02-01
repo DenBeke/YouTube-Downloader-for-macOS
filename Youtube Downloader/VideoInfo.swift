@@ -14,13 +14,29 @@ class VideoInfo: Codable {
     var thumbnail: String = ""
     var uploader: String = ""
     
-    static func getVideoInfo(url: String) -> VideoInfo {
-        let path   = String(Bundle.main.path(forResource: "youtube-dl", ofType: "")!)
-        let json = executeCommand(command: path, args: ["--dump-json", url])
+    static func getVideoInfo(url: String) throws -> VideoInfo {
+        let path   = String(Bundle.main.path(forResource: "yt-dlp", ofType: "")!)
+        let json = try executeCommand(command: path, args: ["-f", "b", "--dump-json", url])
+        
+        
+        print("test")
         
         let jsonDecoder = JSONDecoder()
-        let info = try? jsonDecoder.decode(VideoInfo.self, from: json.data(using: .utf8)!)
+        //let info = try? jsonDecoder.decode(VideoInfo.self, from: json.data(using: .utf8)!)
         
-        return info!
+        
+        var info: VideoInfo
+        
+
+        do {
+            info = try jsonDecoder.decode(VideoInfo.self, from: json.data(using: .utf8)!)
+        }
+        catch {
+            print("Unexpected error while parsing JSON: \(error)")
+            throw ParseError(error.localizedDescription)
+        }
+    
+        
+        return info
     }
 }

@@ -22,11 +22,11 @@
 		C791BD2520F7562400625D46 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C791BD2420F7562400625D46 /* placeholder.png */; };
 		C7C5C4DD27A99A6600DFDE00 /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4DC27A99A6600DFDE00 /* errors.swift */; };
 		C7C5C4E527A9AD8F00DFDE00 /* crash_report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */; };
-		C7C5C51427A9BC3500DFDE00 /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C7C5C51327A9BC3500DFDE00 /* yt-dlp */; };
 		C7C5C51627A9C55F00DFDE00 /* Sentry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */; };
 		C7C5C51727A9C55F00DFDE00 /* Sentry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F9F8DB1FBA3D560033E5EC /* execute_command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */; };
 		C7F9F8DD1FBA3D6A0033E5EC /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */; };
+		C7FB385E28B1180E00DB1E2B /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C7FB385D28B1180D00DB1E2B /* yt-dlp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,9 +144,9 @@
 		C7C5C4DC27A99A6600DFDE00 /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
 		C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crash_report.swift; sourceTree = "<group>"; };
 		C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sentry.xcodeproj; path = "sentry-cocoa/Sentry.xcodeproj"; sourceTree = "<group>"; };
-		C7C5C51327A9BC3500DFDE00 /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "yt-dlp"; sourceTree = "<group>"; };
 		C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = execute_command.swift; sourceTree = "<group>"; };
 		C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
+		C7FB385D28B1180D00DB1E2B /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "yt-dlp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +186,8 @@
 		C719FEAD1FB35D4D00912D76 /* Youtube Downloader */ = {
 			isa = PBXGroup;
 			children = (
+				C7FB385D28B1180D00DB1E2B /* yt-dlp */,
 				C791BD2420F7562400625D46 /* placeholder.png */,
-				C7C5C51327A9BC3500DFDE00 /* yt-dlp */,
 				C791BD1E20F6999500625D46 /* PreviewView.swift */,
 				C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */,
 				C791BD2020F69D9200625D46 /* PreviewView.xib */,
@@ -376,7 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7C5C51427A9BC3500DFDE00 /* yt-dlp in Resources */,
+				C7FB385E28B1180E00DB1E2B /* yt-dlp in Resources */,
 				C791BD2120F69D9200625D46 /* PreviewView.xib in Resources */,
 				C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */,
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,
@@ -555,7 +555,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Youtube Downloader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MARKETING_VERSION = 0.9;
+				MARKETING_VERSION = 0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "denbeke.Youtube-Downloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -573,7 +573,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Youtube Downloader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MARKETING_VERSION = 0.9;
+				MARKETING_VERSION = 0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "denbeke.Youtube-Downloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

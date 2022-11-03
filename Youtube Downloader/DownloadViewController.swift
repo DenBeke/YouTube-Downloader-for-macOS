@@ -8,6 +8,7 @@
 
 import Cocoa
 import Alamofire
+import SwiftUI
 
 
 func errorDialog(question: String, text: String) -> Bool {
@@ -25,17 +26,40 @@ class DownloadViewController: NSViewController {
     
     
     @IBOutlet weak var videoUrl: NSTextField!
+    @IBOutlet weak var downloadPath: NSTextField!
     var downloadUrl: String = ""
     
     @IBOutlet weak var spinner: NSProgressIndicator!
     @IBOutlet weak var progressbar: NSProgressIndicator!
     @IBOutlet weak var downloadButton: NSButton!
     @IBOutlet weak var quitButton: NSButton!
+    @IBOutlet weak var browserPath: NSButton!
     @IBOutlet weak var message: NSTextField!
     
     
-    
     @IBOutlet weak var preview: PreviewView!
+    
+    @IBAction func browserPathClicked(_ sender: Any){
+        let dialog = NSOpenPanel();
+
+        dialog.title                   = "Choose a directory";
+        dialog.showsResizeIndicator    = true;
+        dialog.showsHiddenFiles        = false;
+        dialog.allowsMultipleSelection = false;
+        dialog.canChooseFiles = false;
+        dialog.canChooseDirectories = true;
+
+        if (dialog.runModal() ==  NSApplication.ModalResponse.OK) {
+            let result = dialog.url // Pathname of the file
+
+            if (result != nil) {
+                self.downloadPath.stringValue = result!.path
+            }
+        } else {
+            return
+        }
+
+    }
     
     
     
@@ -43,10 +67,25 @@ class DownloadViewController: NSViewController {
         
         downloadButton.isHidden = true
         quitButton.isHidden = true
+        browserPath.isHidden = true
         spinner.isHidden = false
         spinner.startAnimation(self)
         
         let url = videoUrl.stringValue
+        
+        // handle paths like ~/Downloads to absolute paths
+        let download2path = downloadPath.stringValue.replacingOccurrences(of: "~", with: FileManager.default.homeDirectoryForCurrentUser.path)
+        var documentsURL = URL(fileURLWithPath: download2path, isDirectory: true)
+        // check out if the path is valid
+        if !FileManager.default.fileExists(atPath: documentsURL.path){
+            let alert = NSAlert()
+            alert.messageText = "Oops, something went wrong"
+            alert.informativeText = documentsURL.path + " is not a directory"
+            alert.alertStyle = NSAlert.Style.warning
+            alert.runModal()
+            self.reset()
+            return
+        }
         
         DispatchQueue.global(qos: .background).async {
             // This is run on the background queue
@@ -84,12 +123,12 @@ class DownloadViewController: NSViewController {
                 self.progressbar.isHidden = false
                 self.preview.isHidden = false
                 self.videoUrl.isHidden = true
+                self.downloadPath.isHidden = true
 
                 
                 let destination: DownloadRequest.Destination = { _, _ in
                     let suffix = Date().toString(dateFormat: "dd-MM-YY")
                     let pathComponent = "\(title) (\(suffix)).mp4"
-                    var documentsURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0]
                     documentsURL.appendPathComponent(pathComponent)
                     return (documentsURL, [.removePreviousFile, .createIntermediateDirectories])
                 }
@@ -121,8 +160,10 @@ class DownloadViewController: NSViewController {
         self.message.isHidden = true
         self.downloadButton.isHidden = false
         self.videoUrl.stringValue = ""
+        self.downloadPath.stringValue = "~/Downloads"
         self.preview.isHidden = true
         self.videoUrl.isHidden = false
+        self.browserPath.isHidden = false
         self.spinner.isHidden = true
         self.spinner.stopAnimation(self)
         self.quitButton.isHidden = false

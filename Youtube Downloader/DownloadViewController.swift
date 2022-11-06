@@ -108,10 +108,6 @@ class DownloadViewController: NSViewController {
                 }
             }
         }
-        
-        
-        
-        
     }
     
     
@@ -134,6 +130,22 @@ class DownloadViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        getURLFromClipboard()
+    }
+    
+    func getURLFromClipboard() {
+        let readURL = NSPasteboard.general.pasteboardItems?.first?.string(forType: .string)
+        
+        if let clipboardContent = readURL {
+            if !clipboardContent.contains("youtube.com") { return }
+            guard let _ = URL(string: clipboardContent) else { return }
+            self.videoUrl.stringValue = clipboardContent
+        }
     }
     
     

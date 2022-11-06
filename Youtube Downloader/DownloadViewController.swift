@@ -142,7 +142,7 @@ class DownloadViewController: NSViewController {
         let readURL = NSPasteboard.general.pasteboardItems?.first?.string(forType: .string)
         
         if let clipboardContent = readURL {
-            if !clipboardContent.contains("youtube.com") { return }
+            if !clipboardContent.contains("youtube.com") && !clipboardContent.contains("youtu.be") { return }
             guard let _ = URL(string: clipboardContent) else { return }
             self.videoUrl.stringValue = clipboardContent
         }

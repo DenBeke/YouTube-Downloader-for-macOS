@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0393CE6629A2AB1D005083CE /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = 0393CE6529A2AB1D005083CE /* yt-dlp */; };
 		C707639F2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */; };
 		C719FEAF1FB35D4D00912D76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */; };
 		C719FEB11FB35D4D00912D76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEB01FB35D4D00912D76 /* ViewController.swift */; };
@@ -26,7 +27,6 @@
 		C7C5C51727A9C55F00DFDE00 /* Sentry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F9F8DB1FBA3D560033E5EC /* execute_command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */; };
 		C7F9F8DD1FBA3D6A0033E5EC /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */; };
-		C7FB385E28B1180E00DB1E2B /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C7FB385D28B1180D00DB1E2B /* yt-dlp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +79,6 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
-		C719FF151FB36BBF00912D76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4DD67C0A1A5C55C900ED2280;
-			remoteInfo = "Alamofire macOS";
-		};
 		C7C5C4FD27A9B2C000DFDE00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
@@ -99,13 +92,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 63AA76651EB8CB2F00D153DE;
 			remoteInfo = SentryTests;
-		};
-		C7C5C50127A9B2CA00DFDE00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 63AA759A1EB8AEF500D153DE;
-			remoteInfo = Sentry;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -125,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0393CE6529A2AB1D005083CE /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "yt-dlp"; sourceTree = "<group>"; };
 		C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageView_ScaleAspectFill.swift; sourceTree = "<group>"; };
 		C719FEAB1FB35D4D00912D76 /* Youtube Downloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Downloader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +133,6 @@
 		C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sentry.xcodeproj; path = "sentry-cocoa/Sentry.xcodeproj"; sourceTree = "<group>"; };
 		C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = execute_command.swift; sourceTree = "<group>"; };
 		C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
-		C7FB385D28B1180D00DB1E2B /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "yt-dlp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +172,8 @@
 		C719FEAD1FB35D4D00912D76 /* Youtube Downloader */ = {
 			isa = PBXGroup;
 			children = (
-				C7FB385D28B1180D00DB1E2B /* yt-dlp */,
 				C791BD2420F7562400625D46 /* placeholder.png */,
+				0393CE6529A2AB1D005083CE /* yt-dlp */,
 				C791BD1E20F6999500625D46 /* PreviewView.swift */,
 				C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */,
 				C791BD2020F69D9200625D46 /* PreviewView.xib */,
@@ -252,8 +238,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C7C5C50227A9B2CA00DFDE00 /* PBXTargetDependency */,
-				C719FF161FB36BBF00912D76 /* PBXTargetDependency */,
 			);
 			name = "Youtube Downloader";
 			productName = "Youtube Downloader";
@@ -376,7 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7FB385E28B1180E00DB1E2B /* yt-dlp in Resources */,
+				0393CE6629A2AB1D005083CE /* yt-dlp in Resources */,
 				C791BD2120F69D9200625D46 /* PreviewView.xib in Resources */,
 				C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */,
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,
@@ -406,19 +390,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C719FF161FB36BBF00912D76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire macOS";
-			targetProxy = C719FF151FB36BBF00912D76 /* PBXContainerItemProxy */;
-		};
-		C7C5C50227A9B2CA00DFDE00 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Sentry;
-			targetProxy = C7C5C50127A9B2CA00DFDE00 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C719FEB41FB35D4D00912D76 /* Main.storyboard */ = {
@@ -555,7 +526,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Youtube Downloader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MARKETING_VERSION = 0.10;
+				MARKETING_VERSION = 0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "denbeke.Youtube-Downloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -573,7 +544,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Youtube Downloader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MARKETING_VERSION = 0.10;
+				MARKETING_VERSION = 0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "denbeke.Youtube-Downloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

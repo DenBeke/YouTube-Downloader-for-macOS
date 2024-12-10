@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C707639F2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */; };
-		C708F8C02CB5B73800E71B52 /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C708F8BF2CB5B73800E71B52 /* yt-dlp */; };
 		C719FEAF1FB35D4D00912D76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */; };
 		C719FEB11FB35D4D00912D76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEB01FB35D4D00912D76 /* ViewController.swift */; };
 		C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C719FEB21FB35D4D00912D76 /* Assets.xcassets */; };
@@ -21,6 +20,7 @@
 		C791BD2120F69D9200625D46 /* PreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C791BD2020F69D9200625D46 /* PreviewView.xib */; };
 		C791BD2320F74D8400625D46 /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791BD2220F74D8400625D46 /* NibLoader.swift */; };
 		C791BD2520F7562400625D46 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C791BD2420F7562400625D46 /* placeholder.png */; };
+		C7C1B3652D08B9720049FF75 /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C7C1B3642D08B9720049FF75 /* yt-dlp */; };
 		C7C5C4DD27A99A6600DFDE00 /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4DC27A99A6600DFDE00 /* errors.swift */; };
 		C7C5C4E527A9AD8F00DFDE00 /* crash_report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */; };
 		C7C5C51627A9C55F00DFDE00 /* Sentry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */; };
@@ -140,7 +140,6 @@
 
 /* Begin PBXFileReference section */
 		C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageView_ScaleAspectFill.swift; sourceTree = "<group>"; };
-		C708F8BF2CB5B73800E71B52 /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "yt-dlp"; sourceTree = "<group>"; };
 		C719FEAB1FB35D4D00912D76 /* Youtube Downloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Downloader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C719FEB01FB35D4D00912D76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +155,7 @@
 		C791BD2020F69D9200625D46 /* PreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewView.xib; sourceTree = "<group>"; };
 		C791BD2220F74D8400625D46 /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
 		C791BD2420F7562400625D46 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		C7C1B3642D08B9720049FF75 /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "yt-dlp"; sourceTree = "<group>"; };
 		C7C5C4DC27A99A6600DFDE00 /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
 		C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crash_report.swift; sourceTree = "<group>"; };
 		C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sentry.xcodeproj; path = "sentry-cocoa/Sentry.xcodeproj"; sourceTree = "<group>"; };
@@ -204,9 +204,9 @@
 				C791BD1E20F6999500625D46 /* PreviewView.swift */,
 				C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */,
 				C791BD2020F69D9200625D46 /* PreviewView.xib */,
-				C708F8BF2CB5B73800E71B52 /* yt-dlp */,
 				C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */,
 				C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */,
+				C7C1B3642D08B9720049FF75 /* yt-dlp */,
 				C791BD2220F74D8400625D46 /* NibLoader.swift */,
 				C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */,
 				C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */,
@@ -420,7 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C708F8C02CB5B73800E71B52 /* yt-dlp in Resources */,
+				C7C1B3652D08B9720049FF75 /* yt-dlp in Resources */,
 				C791BD2120F69D9200625D46 /* PreviewView.xib in Resources */,
 				C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */,
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,

@@ -22,6 +22,7 @@ func errorDialog(question: String, text: String) -> Bool {
 
 
 class DownloadViewController: NSViewController {
+    @IBOutlet weak var percentLabel: NSTextField!
     
     
     @IBOutlet weak var videoUrl: NSTextField!
@@ -82,6 +83,7 @@ class DownloadViewController: NSViewController {
                 self.preview.setInfo(info: videoInfo)
                 self.spinner.isHidden = true
                 self.progressbar.isHidden = false
+                self.percentLabel.isHidden = false
                 self.preview.isHidden = false
                 self.videoUrl.isHidden = true
 
@@ -96,9 +98,11 @@ class DownloadViewController: NSViewController {
                 
                 AF.download(self.downloadUrl, to: destination).downloadProgress { progress in
                     print("Download Progress: \(progress.fractionCompleted)")
+                    self.percentLabel.stringValue = String(format: "%.1f%%", progress.fractionCompleted * 100)
                     self.progressbar.doubleValue = progress.fractionCompleted
                     }.response { response in
                         self.progressbar.isHidden = true
+                        self.percentLabel.isHidden = true
                         self.message.stringValue = "Downloaded: \(title)"
                         self.message.isHidden = false
                         
@@ -113,6 +117,7 @@ class DownloadViewController: NSViewController {
     
     func reset() {
         self.progressbar.isHidden = true
+        self.percentLabel.isHidden = true
         self.progressbar.doubleValue = 0
         self.message.isHidden = true
         self.downloadButton.isHidden = false

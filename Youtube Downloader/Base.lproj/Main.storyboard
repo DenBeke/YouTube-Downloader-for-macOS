@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -693,7 +693,7 @@
                                 <rect key="frame" x="20" y="21" width="389" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
-                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-29-6Yz">
+                            <textField hidden="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-29-6Yz">
                                 <rect key="frame" x="18" y="23" width="393" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="R5T-V5-dGf">
@@ -720,7 +720,7 @@ DQ
                                     <action selector="downloadButtonClicked:" target="XfG-lQ-9wD" id="vzt-9u-ySi"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-ff-HEa">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-ff-HEa">
                                 <rect key="frame" x="20" y="89" width="389" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="UDf-kP-ieK">
@@ -744,11 +744,21 @@ DQ
                                     <action selector="QuitWithSender:" target="XfG-lQ-9wD" id="L89-8n-T6Q"/>
                                 </connections>
                             </button>
+                            <textField hidden="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hd-qU-WI2">
+                                <rect key="frame" x="196" y="7" width="37" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="psQ-7d-prK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="downloadButton" destination="hvN-kN-ctS" id="aXr-jB-OVD"/>
                         <outlet property="message" destination="DMU-29-6Yz" id="o8D-V8-L6J"/>
+                        <outlet property="percentLabel" destination="8hd-qU-WI2" id="Mqj-qx-QEq"/>
                         <outlet property="preview" destination="geM-iV-lon" id="juc-B9-Y9e"/>
                         <outlet property="progressbar" destination="re9-0Z-l3o" id="EEh-A1-CLz"/>
                         <outlet property="quitButton" destination="jqp-I9-CCn" id="uF1-aS-IOA"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312BEA5A2DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 in Resources */ = {isa = PBXBuildFile; fileRef = 312BEA592DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 */; };
+		312BEA5B2DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 in Resources */ = {isa = PBXBuildFile; fileRef = 312BEA582DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 */; };
 		31971DC52DA5ADC70094D713 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 31971DC42DA5ADC70094D713 /* Sentry */; };
 		31971DC92DA5ADC70094D713 /* SentrySwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 31971DC82DA5ADC70094D713 /* SentrySwiftUI */; };
 		31971DD02DA5AF9C0094D713 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 31971DCF2DA5AF9C0094D713 /* Alamofire */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		312BEA062DB0302D003F4AE9 /* Youtube DownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youtube DownloaderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		312BEA582DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "ffmpeg-darwin-arm64"; sourceTree = "<group>"; };
+		312BEA592DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "ffmpeg-darwin-x64"; sourceTree = "<group>"; };
 		C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageView_ScaleAspectFill.swift; sourceTree = "<group>"; };
 		C719FEAB1FB35D4D00912D76 /* Youtube Downloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Downloader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 		C719FEAD1FB35D4D00912D76 /* Youtube Downloader */ = {
 			isa = PBXGroup;
 			children = (
+				312BEA582DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 */,
+				312BEA592DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 */,
 				C791BD2420F7562400625D46 /* placeholder.png */,
 				C791BD1E20F6999500625D46 /* PreviewView.swift */,
 				C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */,
@@ -185,6 +191,7 @@
 				C719FEA71FB35D4D00912D76 /* Sources */,
 				C719FEA81FB35D4D00912D76 /* Frameworks */,
 				C719FEA91FB35D4D00912D76 /* Resources */,
+				312BEA5C2DB6D3E2003F4AE9 /* ShellScript */,
 				C719FF171FB36BC000912D76 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -258,10 +265,32 @@
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,
 				C791BD2520F7562400625D46 /* placeholder.png in Resources */,
 				C719FEB61FB35D4D00912D76 /* Main.storyboard in Resources */,
+				312BEA5A2DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 in Resources */,
+				312BEA5B2DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		312BEA5C2DB6D3E2003F4AE9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail      # stop on first error and echo failing line\n\n# Path to Resources inside the built .app\nRES=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\n\n# List the helpers you expect.\n#   If you merged into one universal binary, change this to just: helpers=\"ffmpeg\"\nhelpers=\"ffmpeg-darwin-arm64 ffmpeg-darwin-x64\"\n\nfor helper in $helpers; do\n    if [ -f \"$RES/$helper\" ]; then\n        echo \"‣ Preparing $helper\"\n        chmod a+x \"$RES/$helper\"\n        codesign --force --timestamp --options runtime \\\n                 --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" \"$RES/$helper\"\n    else\n        echo \"warning: $helper not found in $RES – skipping\"\n    fi\ndone\n\nexit 0  \n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		312BEA022DB0302D003F4AE9 /* Sources */ = {

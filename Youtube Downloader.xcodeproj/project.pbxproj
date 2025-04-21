@@ -3,18 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312BEA5A2DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 in Resources */ = {isa = PBXBuildFile; fileRef = 312BEA592DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 */; };
+		312BEA5B2DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 in Resources */ = {isa = PBXBuildFile; fileRef = 312BEA582DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 */; };
+		31971DC52DA5ADC70094D713 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 31971DC42DA5ADC70094D713 /* Sentry */; };
+		31971DC92DA5ADC70094D713 /* SentrySwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 31971DC82DA5ADC70094D713 /* SentrySwiftUI */; };
+		31971DD02DA5AF9C0094D713 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 31971DCF2DA5AF9C0094D713 /* Alamofire */; };
 		C707639F2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */; };
 		C719FEAF1FB35D4D00912D76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */; };
 		C719FEB11FB35D4D00912D76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEB01FB35D4D00912D76 /* ViewController.swift */; };
 		C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C719FEB21FB35D4D00912D76 /* Assets.xcassets */; };
 		C719FEB61FB35D4D00912D76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C719FEB41FB35D4D00912D76 /* Main.storyboard */; };
 		C719FEC31FB35F1B00912D76 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */; };
-		C719FF131FB36BBF00912D76 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C719FF0A1FB36B7900912D76 /* Alamofire.framework */; };
-		C719FF141FB36BBF00912D76 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C719FF0A1FB36B7900912D76 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C75EC95A240D56C300EF8589 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = C75EC959240D56C300EF8589 /* exportOptions.plist */; };
 		C761EDC92D9335DD00CE7399 /* yt-dlp in Resources */ = {isa = PBXBuildFile; fileRef = C761EDC82D9335DD00CE7399 /* yt-dlp */; };
 		C791BD1F20F6999500625D46 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791BD1E20F6999500625D46 /* PreviewView.swift */; };
@@ -23,103 +26,17 @@
 		C791BD2520F7562400625D46 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C791BD2420F7562400625D46 /* placeholder.png */; };
 		C7C5C4DD27A99A6600DFDE00 /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4DC27A99A6600DFDE00 /* errors.swift */; };
 		C7C5C4E527A9AD8F00DFDE00 /* crash_report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */; };
-		C7C5C51627A9C55F00DFDE00 /* Sentry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */; };
-		C7C5C51727A9C55F00DFDE00 /* Sentry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F9F8DB1FBA3D560033E5EC /* execute_command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */; };
 		C7F9F8DD1FBA3D6A0033E5EC /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C719FF051FB36B7900912D76 /* PBXContainerItemProxy */ = {
+		312BEA0A2DB0302D003F4AE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		C719FF071FB36B7900912D76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		C719FF091FB36B7900912D76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire macOS";
-		};
-		C719FF0B1FB36B7900912D76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire macOS Tests";
-		};
-		C719FF0D1FB36B7900912D76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		C719FF0F1FB36B7900912D76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		C719FF111FB36B7900912D76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
-		C7371FE72C4599EF00D6D727 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D8199DAA29376E9B0074249E;
-			remoteInfo = SentrySwiftUI;
-		};
-		C7371FE92C4599EF00D6D727 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8431EFD929B27B1100D8DC56;
-			remoteInfo = SentryProfilerTests;
-		};
-		C7371FEB2C4599EF00D6D727 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8431F00A29B284F200D8DC56;
-			remoteInfo = SentryTestUtils;
-		};
-		C7371FED2C4599EF00D6D727 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D84DAD4D2B17428D003CF120;
-			remoteInfo = SentryTestUtilsDynamic;
-		};
-		C7C5C4FD27A9B2C000DFDE00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 63AA759B1EB8AEF500D153DE;
-			remoteInfo = Sentry;
-		};
-		C7C5C4FF27A9B2C000DFDE00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 63AA76651EB8CB2F00D153DE;
-			remoteInfo = SentryTests;
+			containerPortal = C719FEA31FB35D4D00912D76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C719FEAA1FB35D4D00912D76;
+			remoteInfo = "Youtube Downloader";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -130,8 +47,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C719FF141FB36BBF00912D76 /* Alamofire.framework in Embed Frameworks */,
-				C7C5C51727A9C55F00DFDE00 /* Sentry.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +54,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		312BEA062DB0302D003F4AE9 /* Youtube DownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youtube DownloaderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		312BEA582DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "ffmpeg-darwin-arm64"; sourceTree = "<group>"; };
+		312BEA592DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "ffmpeg-darwin-x64"; sourceTree = "<group>"; };
 		C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageView_ScaleAspectFill.swift; sourceTree = "<group>"; };
 		C719FEAB1FB35D4D00912D76 /* Youtube Downloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Downloader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C719FEAE1FB35D4D00912D76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +66,6 @@
 		C719FEB71FB35D4D00912D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C719FEB81FB35D4D00912D76 /* Youtube_Downloader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Youtube_Downloader.entitlements; sourceTree = "<group>"; };
 		C719FEC21FB35F1B00912D76 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
-		C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C719FF181FB3AD8F00912D76 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C75EC959240D56C300EF8589 /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		C761EDC82D9335DD00CE7399 /* yt-dlp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "yt-dlp"; sourceTree = "<group>"; };
@@ -158,18 +75,29 @@
 		C791BD2420F7562400625D46 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		C7C5C4DC27A99A6600DFDE00 /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
 		C7C5C4E427A9AD8F00DFDE00 /* crash_report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crash_report.swift; sourceTree = "<group>"; };
-		C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sentry.xcodeproj; path = "sentry-cocoa/Sentry.xcodeproj"; sourceTree = "<group>"; };
 		C7F9F8DA1FBA3D560033E5EC /* execute_command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = execute_command.swift; sourceTree = "<group>"; };
 		C7F9F8DC1FBA3D6A0033E5EC /* VideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		312BEA072DB0302D003F4AE9 /* Youtube DownloaderTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Youtube DownloaderTests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		312BEA032DB0302D003F4AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C719FEA81FB35D4D00912D76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C719FF131FB36BBF00912D76 /* Alamofire.framework in Frameworks */,
-				C7C5C51627A9C55F00DFDE00 /* Sentry.framework in Frameworks */,
+				31971DD02DA5AF9C0094D713 /* Alamofire in Frameworks */,
+				31971DC52DA5ADC70094D713 /* Sentry in Frameworks */,
+				31971DC92DA5ADC70094D713 /* SentrySwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,9 +110,8 @@
 				C75EC959240D56C300EF8589 /* exportOptions.plist */,
 				C719FF181FB3AD8F00912D76 /* README.md */,
 				C719FEAD1FB35D4D00912D76 /* Youtube Downloader */,
+				312BEA072DB0302D003F4AE9 /* Youtube DownloaderTests */,
 				C719FEAC1FB35D4D00912D76 /* Products */,
-				C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */,
-				C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */,
 				C7C5C51527A9C55F00DFDE00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -193,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C719FEAB1FB35D4D00912D76 /* Youtube Downloader.app */,
+				312BEA062DB0302D003F4AE9 /* Youtube DownloaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,6 +128,8 @@
 		C719FEAD1FB35D4D00912D76 /* Youtube Downloader */ = {
 			isa = PBXGroup;
 			children = (
+				312BEA582DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 */,
+				312BEA592DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 */,
 				C791BD2420F7562400625D46 /* placeholder.png */,
 				C791BD1E20F6999500625D46 /* PreviewView.swift */,
 				C707639E2208B4AC00EC232E /* NSImageView_ScaleAspectFill.swift */,
@@ -221,33 +151,6 @@
 			path = "Youtube Downloader";
 			sourceTree = "<group>";
 		};
-		C719FEFB1FB36B7800912D76 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C719FF061FB36B7900912D76 /* Alamofire.framework */,
-				C719FF081FB36B7900912D76 /* Alamofire iOS Tests.xctest */,
-				C719FF0A1FB36B7900912D76 /* Alamofire.framework */,
-				C719FF0C1FB36B7900912D76 /* Alamofire macOS Tests.xctest */,
-				C719FF0E1FB36B7900912D76 /* Alamofire.framework */,
-				C719FF101FB36B7900912D76 /* Alamofire tvOS Tests.xctest */,
-				C719FF121FB36B7900912D76 /* Alamofire.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C7C5C4F927A9B2C000DFDE00 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */,
-				C7C5C50027A9B2C000DFDE00 /* SentryTests.xctest */,
-				C7371FE82C4599EF00D6D727 /* SentrySwiftUI.framework */,
-				C7371FEA2C4599EF00D6D727 /* SentryProfilerTests.xctest */,
-				C7371FEC2C4599EF00D6D727 /* libSentryTestUtils.a */,
-				C7371FEE2C4599EF00D6D727 /* SentryTestUtilsDynamic.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C7C5C51527A9C55F00DFDE00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +161,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		312BEA052DB0302D003F4AE9 /* Youtube DownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 312BEA0E2DB0302D003F4AE9 /* Build configuration list for PBXNativeTarget "Youtube DownloaderTests" */;
+			buildPhases = (
+				312BEA022DB0302D003F4AE9 /* Sources */,
+				312BEA032DB0302D003F4AE9 /* Frameworks */,
+				312BEA042DB0302D003F4AE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				312BEA0B2DB0302D003F4AE9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				312BEA072DB0302D003F4AE9 /* Youtube DownloaderTests */,
+			);
+			name = "Youtube DownloaderTests";
+			packageProductDependencies = (
+			);
+			productName = "Youtube DownloaderTests";
+			productReference = 312BEA062DB0302D003F4AE9 /* Youtube DownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C719FEAA1FB35D4D00912D76 /* Youtube Downloader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C719FEBB1FB35D4D00912D76 /* Build configuration list for PBXNativeTarget "Youtube Downloader" */;
@@ -265,6 +191,7 @@
 				C719FEA71FB35D4D00912D76 /* Sources */,
 				C719FEA81FB35D4D00912D76 /* Frameworks */,
 				C719FEA91FB35D4D00912D76 /* Resources */,
+				312BEA5C2DB6D3E2003F4AE9 /* ShellScript */,
 				C719FF171FB36BC000912D76 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -282,10 +209,14 @@
 		C719FEA31FB35D4D00912D76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Mathias Beke";
 				TargetAttributes = {
+					312BEA052DB0302D003F4AE9 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = C719FEAA1FB35D4D00912D76;
+					};
 					C719FEAA1FB35D4D00912D76 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 1130;
@@ -302,120 +233,28 @@
 				Base,
 			);
 			mainGroup = C719FEA21FB35D4D00912D76;
+			packageReferences = (
+				31971DC32DA5ADC70094D713 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				31971DCE2DA5AF9C0094D713 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C719FEAC1FB35D4D00912D76 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C719FEFB1FB36B7800912D76 /* Products */;
-					ProjectRef = C719FEFA1FB36B7800912D76 /* Alamofire.xcodeproj */;
-				},
-				{
-					ProductGroup = C7C5C4F927A9B2C000DFDE00 /* Products */;
-					ProjectRef = C7C5C4F827A9B2C000DFDE00 /* Sentry.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C719FEAA1FB35D4D00912D76 /* Youtube Downloader */,
+				312BEA052DB0302D003F4AE9 /* Youtube DownloaderTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		C719FF061FB36B7900912D76 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = C719FF051FB36B7900912D76 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C719FF081FB36B7900912D76 /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = C719FF071FB36B7900912D76 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C719FF0A1FB36B7900912D76 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = C719FF091FB36B7900912D76 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C719FF0C1FB36B7900912D76 /* Alamofire macOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire macOS Tests.xctest";
-			remoteRef = C719FF0B1FB36B7900912D76 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C719FF0E1FB36B7900912D76 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = C719FF0D1FB36B7900912D76 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C719FF101FB36B7900912D76 /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = C719FF0F1FB36B7900912D76 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C719FF121FB36B7900912D76 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = C719FF111FB36B7900912D76 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7371FE82C4599EF00D6D727 /* SentrySwiftUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SentrySwiftUI.framework;
-			remoteRef = C7371FE72C4599EF00D6D727 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7371FEA2C4599EF00D6D727 /* SentryProfilerTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SentryProfilerTests.xctest;
-			remoteRef = C7371FE92C4599EF00D6D727 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7371FEC2C4599EF00D6D727 /* libSentryTestUtils.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSentryTestUtils.a;
-			remoteRef = C7371FEB2C4599EF00D6D727 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7371FEE2C4599EF00D6D727 /* SentryTestUtilsDynamic.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SentryTestUtilsDynamic.framework;
-			remoteRef = C7371FED2C4599EF00D6D727 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7C5C4FE27A9B2C000DFDE00 /* Sentry.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Sentry.framework;
-			remoteRef = C7C5C4FD27A9B2C000DFDE00 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7C5C50027A9B2C000DFDE00 /* SentryTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SentryTests.xctest;
-			remoteRef = C7C5C4FF27A9B2C000DFDE00 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
+		312BEA042DB0302D003F4AE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C719FEA91FB35D4D00912D76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,12 +265,41 @@
 				C719FEB31FB35D4D00912D76 /* Assets.xcassets in Resources */,
 				C791BD2520F7562400625D46 /* placeholder.png in Resources */,
 				C719FEB61FB35D4D00912D76 /* Main.storyboard in Resources */,
+				312BEA5A2DB6D3B8003F4AE9 /* ffmpeg-darwin-x64 in Resources */,
+				312BEA5B2DB6D3B8003F4AE9 /* ffmpeg-darwin-arm64 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		312BEA5C2DB6D3E2003F4AE9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail      # stop on first error and echo failing line\n\n# Path to Resources inside the built .app\nRES=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\n\n# List the helpers you expect.\n#   If you merged into one universal binary, change this to just: helpers=\"ffmpeg\"\nhelpers=\"ffmpeg-darwin-arm64 ffmpeg-darwin-x64\"\n\nfor helper in $helpers; do\n    if [ -f \"$RES/$helper\" ]; then\n        echo \"‣ Preparing $helper\"\n        chmod a+x \"$RES/$helper\"\n        codesign --force --timestamp --options runtime \\\n                 --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" \"$RES/$helper\"\n    else\n        echo \"warning: $helper not found in $RES – skipping\"\n    fi\ndone\n\nexit 0  \n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		312BEA022DB0302D003F4AE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C719FEA71FB35D4D00912D76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,6 +319,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		312BEA0B2DB0302D003F4AE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C719FEAA1FB35D4D00912D76 /* Youtube Downloader */;
+			targetProxy = 312BEA0A2DB0302D003F4AE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C719FEB41FB35D4D00912D76 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -463,6 +339,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		312BEA0C2DB0302D003F4AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ngoli.Youtube-DownloaderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Youtube Downloader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Youtube Downloader";
+			};
+			name = Debug;
+		};
+		312BEA0D2DB0302D003F4AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ngoli.Youtube-DownloaderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Youtube Downloader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Youtube Downloader";
+			};
+			name = Release;
+		};
 		C719FEB91FB35D4D00912D76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,7 +497,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -585,7 +512,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Youtube Downloader/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.19;
 				PRODUCT_BUNDLE_IDENTIFIER = "denbeke.Youtube-Downloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -603,7 +534,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Youtube Downloader/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.19;
 				PRODUCT_BUNDLE_IDENTIFIER = "denbeke.Youtube-Downloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -614,6 +549,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		312BEA0E2DB0302D003F4AE9 /* Build configuration list for PBXNativeTarget "Youtube DownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				312BEA0C2DB0302D003F4AE9 /* Debug */,
+				312BEA0D2DB0302D003F4AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C719FEA61FB35D4D00912D76 /* Build configuration list for PBXProject "Youtube Downloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -633,6 +577,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		31971DC32DA5ADC70094D713 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.48.0;
+			};
+		};
+		31971DCE2DA5AF9C0094D713 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		31971DC42DA5ADC70094D713 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31971DC32DA5ADC70094D713 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+		31971DC82DA5ADC70094D713 /* SentrySwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31971DC32DA5ADC70094D713 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = SentrySwiftUI;
+		};
+		31971DCF2DA5AF9C0094D713 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31971DCE2DA5AF9C0094D713 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C719FEA31FB35D4D00912D76 /* Project object */;
 }

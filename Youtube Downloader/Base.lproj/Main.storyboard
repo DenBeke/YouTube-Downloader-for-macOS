@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -693,7 +694,7 @@
                                 <rect key="frame" x="20" y="21" width="389" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
-                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-29-6Yz">
+                            <textField hidden="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-29-6Yz">
                                 <rect key="frame" x="18" y="23" width="393" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="R5T-V5-dGf">
@@ -707,7 +708,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvN-kN-ctS">
-                                <rect key="frame" x="112" y="29" width="132" height="34"/>
+                                <rect key="frame" x="108" y="29" width="132" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Download" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dxw-6p-HaB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -720,7 +721,7 @@ DQ
                                     <action selector="downloadButtonClicked:" target="XfG-lQ-9wD" id="vzt-9u-ySi"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-ff-HEa">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-ff-HEa">
                                 <rect key="frame" x="20" y="89" width="389" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="UDf-kP-ieK">
@@ -734,7 +735,7 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jqp-I9-CCn">
-                                <rect key="frame" x="244" y="29" width="73" height="34"/>
+                                <rect key="frame" x="247" y="29" width="73" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HP5-IK-cHN">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -744,15 +745,54 @@ DQ
                                     <action selector="QuitWithSender:" target="XfG-lQ-9wD" id="L89-8n-T6Q"/>
                                 </connections>
                             </button>
+                            <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7l-lN-LMa">
+                                <rect key="frame" x="17" y="33" width="321" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Quality" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="hdE-ua-CTm" id="kYZ-f0-yxe">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="GBF-iW-icF">
+                                        <items>
+                                            <menuItem title="Quality" state="on" id="hdE-ua-CTm"/>
+                                            <menuItem title="Item 2" id="gvl-3R-1HN"/>
+                                            <menuItem title="Item 3" id="Qya-Pa-M0g"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fme-UB-ZZb">
+                                <rect key="frame" x="336" y="31" width="73" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="idv-YD-DDG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="AccentColor"/>
+                                <connections>
+                                    <action selector="qualityButtonClicked:" target="XfG-lQ-9wD" id="PR1-Ge-uB8"/>
+                                </connections>
+                            </button>
+                            <textField hidden="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hd-qU-WI2">
+                                <rect key="frame" x="186" y="7" width="56" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="psQ-7d-prK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="downloadButton" destination="hvN-kN-ctS" id="aXr-jB-OVD"/>
                         <outlet property="message" destination="DMU-29-6Yz" id="o8D-V8-L6J"/>
+                        <outlet property="percentLabel" destination="8hd-qU-WI2" id="Mqj-qx-QEq"/>
                         <outlet property="preview" destination="geM-iV-lon" id="juc-B9-Y9e"/>
                         <outlet property="progressbar" destination="re9-0Z-l3o" id="EEh-A1-CLz"/>
+                        <outlet property="qualityButton" destination="fme-UB-ZZb" id="nle-XC-jcU"/>
                         <outlet property="quitButton" destination="jqp-I9-CCn" id="uF1-aS-IOA"/>
                         <outlet property="spinner" destination="o2I-Vf-I2E" id="TbQ-bQ-nQq"/>
+                        <outlet property="videoQuality" destination="d7l-lN-LMa" id="tOt-hR-aWc"/>
                         <outlet property="videoUrl" destination="oJO-ff-HEa" id="G0A-rK-eOb"/>
                     </connections>
                 </viewController>
@@ -761,4 +801,9 @@ DQ
             <point key="canvasLocation" x="49.5" y="588"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
